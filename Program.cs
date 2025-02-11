@@ -6,12 +6,11 @@ using Microsoft.SemanticKernel.ChatCompletion;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
 
 // Populate values from your OpenAI deployment
-var modelId = "";
-var endpoint = "";
+var modelId = "gpt-4o-mini";
 var apiKey = "";
 
 // Create a kernel with Azure OpenAI chat completion
-var builder = Kernel.CreateBuilder().AddAzureOpenAIChatCompletion(modelId, endpoint, apiKey);
+var builder = Kernel.CreateBuilder().AddOpenAIChatCompletion(modelId, apiKey);
 
 // Add enterprise components
 builder.Services.AddLogging(services => services.AddConsole().SetMinimumLevel(LogLevel.Trace));
@@ -40,7 +39,7 @@ do {
     userInput = Console.ReadLine();
 
     // Add user input
-    history.AddUserMessage(userInput);
+    history.AddUserMessage(userInput!);
 
     // Get the response from the AI
     var result = await chatCompletionService.GetChatMessageContentAsync(

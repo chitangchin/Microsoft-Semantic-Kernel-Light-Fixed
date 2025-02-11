@@ -41,3 +41,4 @@ C:\Users\Brandon\Desktop\test\obj\Debug\net9.0\refint\test.dll
 C:\Users\Brandon\Desktop\test\obj\Debug\net9.0\test.pdb
 C:\Users\Brandon\Desktop\test\obj\Debug\net9.0\test.genruntimeconfig.cache
 C:\Users\Brandon\Desktop\test\obj\Debug\net9.0\ref\test.dll
+C:\Users\Brandon\Desktop\test\obj\Debug\net9.0\test.sourcelink.json
